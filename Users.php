@@ -1,18 +1,22 @@
-<?php 
+ <?php 
 
 
-function getUser()
+function getUsers()
 {
-   $users = json_decode(file_get_contents(__DIR__.'./Users.json'), true);
-   echo '<pre>';
-      var_dump($users);
-   echo '<pre>';
+   return json_decode(file_get_contents(__DIR__."/user.json"), true);
 }
 
 
 function getUserById($id)
 {
-
+    $users = getUsers();
+    foreach ($users as $user)
+    {
+      if($user['id'] == $id){
+         return $user;
+      }
+    }
+   
 }
 
 
