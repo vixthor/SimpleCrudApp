@@ -1,14 +1,13 @@
 <?php 
  include './partials/header.php';
 require __DIR__.'/Users.php';
-
+$userId = $_GET['id']; 
+$user = getUserById($userId);
 
 if (!isset($_GET['id'])){
     include './partials/Not_found.php';
-    exit;
 }
-$userId = $_GET['id']; 
-$user = getUserById($userId);
+
 
 
 

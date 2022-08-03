@@ -15,8 +15,9 @@ function getUserById($id)
       if($user['id'] == $id){
          return $user;
       }
+      
     }
-   
+    return null;
 }
 
 
