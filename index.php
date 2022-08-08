@@ -5,7 +5,8 @@
   ?>
 
    
-    <table class="table">
+<div class="container">
+<table class="table">
       <thead>
       <tr>
           <th>Name</th>
@@ -23,7 +24,7 @@
             <td><?php echo $user['username'] ?></td>
             <td><?php echo $user['email'] ?></td>
             <td><?php echo $user['phone'] ?></td>
-            <td><?php echo $user['website'] ?></td>
+            <td><a target="_blank" href="http://<?php echo $user['website'] ?>"><?php echo $user['website'] ?></a></td>
 
             <td>
               <a href="view.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-info">View</a>
@@ -35,6 +36,7 @@
       </tbody>
     </table>
  
+</div>
 <?php include './partials/footer.php'?>
 
 

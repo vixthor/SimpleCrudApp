@@ -17,7 +17,7 @@ function getUserById($id)
       }
       
     }
-    return null;
+    
 }
 
 
