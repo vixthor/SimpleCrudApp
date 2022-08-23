@@ -19,12 +19,12 @@ if (!isset($_GET['id'])){
 
 
 ?>
-<div class="container">
+<div class="container bg-info p-3 mt-3 rounded ">
 <div class="card">
     <div class="card-header">
         <h3>View User: <b><?php echo $user['name'] ?></b></h3>
     </div> 
-<div class="bg-gradient  p-3 rounded m-3">
+<div class="  p-3 rounded m-3">
     <div class="mt-5 p-2 d-flex justify-content-center">
     <h1 class=" ms-3 text-decoration-underline fst-italic fw-bold">User <?php echo $user['id'] ?> Table</h1>
     </div>

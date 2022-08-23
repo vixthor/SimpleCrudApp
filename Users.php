@@ -23,13 +23,20 @@ function getUserById($id)
 
 function createUser($data)
 {
-
+   
 }
 
 
 function updateUser($data, $id)
 {
-
+   $users = getUsers();
+   foreach($users as $i => $user){
+      if($user['id'] == $id){
+        $user[$i] = array_merge($data, $user);
+      }
+   }
+  $encodeUsers = json_encode($users);
+   file_put_contents('user.json', $encodeUsers);
 }
 
 
